@@ -6,7 +6,7 @@
 %define	pdir	HTML
 %define	pnam	ResolveLink
 Summary:	HTML::ResolveLink - Resolve relative links in (X)HTML into absolute URI
-#Summary(pl.UTF-8):	
+Summary(pl.UTF-8):	HTML::ResolveLink - rozwiązywanie odnośników względnych w (X)HTML-u do bezwzględnych URI
 Name:		perl-HTML-ResolveLink
 Version:	0.05
 Release:	1
@@ -39,8 +39,20 @@ and use http://www.example.com/foo/bar as base URL, you'll get:
   <a href="http://www.example.com/foo/foo.html">foo</a>
   <img src="http://www.example.com/bar.gif" />
 
-# %description -l pl.UTF-8
-# TODO
+%description -l pl.UTF-8
+HTML::ResolveLink to moduł do przepisywania odnośników względnych w
+XHTML-u lub HTML-u na bezwzględne URI.
+
+Na przykład dla:
+
+  <a href="foo.html">foo</a>
+  <img src="/bar.gif" />
+
+i użycia http://www.example.com/foo/bar jako URL-a bazowego
+otrzymujemy:
+
+  <a href="http://www.example.com/foo/foo.html">foo</a>
+  <img src="http://www.example.com/bar.gif" />
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
